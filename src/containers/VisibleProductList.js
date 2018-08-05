@@ -6,7 +6,10 @@ const getVisibleProducts = (products, filter) => {
         case 'All':
             return products;
         default:
-            return products.filter(p => p.categories.includes(filter));
+            return products.filter(p => {
+                var regex = new RegExp(p.categories.join("|"), "i");
+                return regex.test(filter);
+            });
     }
 }
 
