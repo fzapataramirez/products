@@ -22,7 +22,7 @@ class Categories extends Component {
     render(){
         var self = this;
         return (            
-            <div>
+            <div className="categoriesContainer">
                 <FilterLink filter='All' name='All'></FilterLink>
                 <FilterLink filter='Tech' name='Tech'></FilterLink>
                 <FilterLink filter='Services' name='Services'></FilterLink>

@@ -1,0 +1,12 @@
+.categoriesContainer{
+    width: 100%;
+}
+
+.categoriesContainer div{
+    height: 30px;
+    cursor: pointer;
+}
+
+.selected{
+    background-color: lightgray;
+}

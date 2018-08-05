@@ -21,17 +21,14 @@ class Product extends Component {
                     <div className="col col-12 productDescription">{this.props.description}</div>
                     <div className="col col-12"><strong>Stock: </strong>{this.props.stock}</div>
                     <div className="col col-12"><strong>Price: </strong>{new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'}).format(this.props.price)}</div>
-                  </div>
-                  
+                  </div>                  
                 </div>
               </div>
             </div>
-          </div>
-          /* <div className="col">{this.props.id} - {this.props.name}</div>               */
+          </div>         
               
       );
     }
   }
   
   export default Product;
-  
