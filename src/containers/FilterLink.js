@@ -1,16 +1,11 @@
-import { connect } from 'react-redux';
-import Link from '../components/Link';
-import { setCategoryFilter } from '../actions'
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-const mapStateToProps = (state, ownProps) => ({    
-    selected: ownProps.filter === state.categoryFilter
-  })
-  
-  const mapDispatchToProps = (dispatch, ownProps) => ({
-    onClick: () => dispatch(setCategoryFilter(ownProps.filter))
-  })
-  
-  export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(Link)
+const FilterLink = ({ filter, children }) => (
+    <NavLink className="categoriesContainer__link" activeClassName="categoriesContainer__link--active"
+        exact to={filter === 'All' ? '/products/' : `/products/${filter}`}>
+        {children}
+    </NavLink>
+)
+
+export default FilterLink

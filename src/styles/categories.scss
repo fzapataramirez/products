@@ -1,12 +1,21 @@
 .categoriesContainer{
+    width: 20%;
+    height: 100%;
+    text-align: left;
+    padding: 10px;
+    border-right: solid lightgray 1px;
+    position: fixed;
+}
+
+.categoriesContainer__link{
+    display: block;
+    text-decoration: none;    
+    height: 40px;
     width: 100%;
+    padding-top: 10px;
+    padding-left: 20px;    
 }
 
-.categoriesContainer div{
-    height: 30px;
-    cursor: pointer;
-}
-
-.selected{
+.categoriesContainer__link--active{
     background-color: lightgray;
 }

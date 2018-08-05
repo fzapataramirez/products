@@ -1,13 +1,22 @@
-.productContainer {
+.productList {
+  position: absolute;
+  width: 80%;
+  right: 0;
+  padding: 20px; }
+
+.productList__product {
   text-align: justify;
   margin-bottom: 10px; }
 
-.productTitle {
+.product__productTitle {
   text-align: left;
   font-size: 1.3em; }
 
-.productDetails {
+.product__productBrand {
+  font-size: 0.9em; }
+
+.product__productDetails {
   margin-top: 30px; }
 
-.productDescription {
+.product__productDescription {
   margin-bottom: 10px; }

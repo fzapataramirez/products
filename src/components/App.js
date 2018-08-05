@@ -1,60 +1,33 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
 import '../styles//App.css';
-import Categories from './Categories';
-import VisibleProductList from '../containers/VisibleProductList';
+import { Route, Link } from 'react-router-dom'
+import Clients from './Clients'
+import Products from './Products';
+import Contacts from './Contacts';
+import Home from './Home';
 
-class App extends Component {  
+class App extends Component {
   render() {
     return (
-
-    //   <NavigationDrawer
-    //    drawerTitle="react-md with CRA"
-    //    toolbarTitle="Welcome to react-md"
-    //  >
-    //    <div className="App">
-    //      <header className="App-header">
-    //        <img src={logo} className="App-logo" alt="logo" />
-    //        <h1 className="App-title">Welcome to React</h1>
-    //      </header>
-    //      <p className="App-intro">
-    //        To get started, edit <code>src/App.js</code> and save to reload.
-    //      </p>
-    //    </div>
-    //  </NavigationDrawer>
-
-
-
-
-
-
-
-
-
-          
-      
       <div className="App">
-      <div className="row">
-        Navigation bar
-      </div>
-
-      <div className="row">
-        <div className="col">
-          <Categories></Categories>
+        <div className="row">
+          <header className="mainHeader">
+            <Link className="mainHeader__navLink" to="/">Home</Link>
+            <Link className="mainHeader__navLink" to="/products">Products</Link>
+            <Link className="mainHeader__navLink" to="/clients">Clients</Link>
+            <Link className="mainHeader__navLink" to="/contacts">Contact</Link>
+          </header>
         </div>
-        <div className="col col-10">
-          <VisibleProductList></VisibleProductList> 
+        <div className="row">
+          <main>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/products/" component={Products} />
+            <Route exact path="/products/:filter?" component={Products} />
+            <Route exact path="/clients" component={Clients} />
+            <Route exact path="/contacts" component={Contacts} />
+          </main>
         </div>
-
       </div>
-
-      
-      <div>
-        
-      </div>
-      
-      </div>
-      
     );
   }
 }

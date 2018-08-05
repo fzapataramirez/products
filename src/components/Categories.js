@@ -1,34 +1,17 @@
-import React,{ Component } from 'react';
+import React, { Component } from 'react';
 import FilterLink from '../containers/FilterLink'
 import '../styles/categories.css'
 
 class Categories extends Component {
-    constructor(){
-        super();
-        this.state = {
-            categories:  ['All', 'Tech', 'Services', 'Office'],
-            selectedIndex: 0
-        }
-    }
-
-    // categorySelected(index){
-
-    //     // The click handler will update the state with
-    //     // the index of the focused menu entry
-
-    //     this.setState(Object.assign({},this.state,{selectedIndex: index}));
-    // }
-
-    render(){
-        var self = this;
-        return (            
+    render() {
+        return (
             <div className="categoriesContainer">
-                <FilterLink filter='All' name='All'></FilterLink>
-                <FilterLink filter='Tech' name='Tech'></FilterLink>
-                <FilterLink filter='Services' name='Services'></FilterLink>
-                <FilterLink filter='Office' name='Office'></FilterLink>
-                
-            </div>
+                Categories
+                <FilterLink filter='All' name='All'>All</FilterLink>
+                <FilterLink filter='Tech' name='Tech'>Tech</FilterLink>
+                <FilterLink filter='Services' name='Services'>Services</FilterLink>
+                <FilterLink filter='Office' name='Office'>Office</FilterLink>
+            </div>            
         );
     }
 }
