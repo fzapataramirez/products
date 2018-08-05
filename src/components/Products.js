@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Categories from './Categories';
 import VisibleProductList from '../containers/VisibleProductList';
 
@@ -8,7 +8,6 @@ const Products = ({ match: { params } }) => {
             <Categories></Categories>
             <VisibleProductList filter={params.filter || 'All'}></VisibleProductList>
         </div>
-
     )
 }
 
